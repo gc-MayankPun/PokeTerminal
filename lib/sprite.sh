@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 get_sprite_path(){
-    if [[ "$CURRENT_SHINY" == true ]]; then
+    if [[ "$CURRENT_SHINY" == "true" ]]; then
         echo "${SPRITES_DIR}/shiny/${CURRENT_POKEMON}.png"
     else
         echo "${SPRITES_DIR}/base/${CURRENT_POKEMON}.png"
@@ -16,5 +16,5 @@ display_sprite(){
         return 1
     fi
 
-    kitty +kitten icat "${pokemon_sprite}"
+    kitty +kitten icat --align=left "${pokemon_sprite}"
 }
