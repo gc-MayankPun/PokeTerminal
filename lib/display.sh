@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
-display_terminal(){
-    echo "Hello"
-}
+show_title(){}
+
+show_encounter(){}
+
+show_stats(){}
+
+display_terminal()
