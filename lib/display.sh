@@ -7,6 +7,7 @@
 # show_stats(){}
 
 display_terminal(){
-    echo "$CURRENT_POKEMON" 
-    echo "$CURRENT_SHINY"
+    display_sprite
+    echo "Pokemon: $CURRENT_POKEMON" 
+    echo "Shiny: $CURRENT_SHINY"
 }
