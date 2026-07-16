@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 
-random_choice(){}
+random_choice(){
+    local array=("$@")
+    echo "${array[RANDOM % ${#array[@]}]}"
+}
 
-chance(){}
+chance(){
+    local percent=$1
+    ((RANDOM % 100 < $percent)) 
+}
 
-capitalize(){}
+# capitalize(){}
 
-divider(){}
+# divider(){}
 
-center(){}
+# center(){}

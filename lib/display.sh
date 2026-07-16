@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-show_title(){}
+# show_title(){}
 
-show_encounter(){}
+# show_encounter(){}
 
-show_stats(){}
+# show_stats(){}
 
-display_terminal()
+display_terminal(){
+    echo "$CURRENT_POKEMON" 
+    echo "$CURRENT_SHINY"
+}
