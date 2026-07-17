@@ -9,14 +9,6 @@ chance(){
     local percent=$1
     ((RANDOM % 100 < $percent)) 
 }
-
-# capitalize(){}
-
-# box(){ 
-    # echo "╭──────────────────────────────────────────────────────────╮"
-#     "$@"
-#     echo "╰──────────────────────────────────────────────────────────╯"
-# }
  
 repeat() {
     local char="$1"
@@ -36,23 +28,13 @@ box() {
     echo "╰$(repeat "─" "$width")╯"
 }
 
-print_row(){
-    printf "│ %-56s │\n" "$1"
+print_row() {
+    local width="$1"
+    shift
+
+    printf "│ %-*s │\n" "$width" "$*"
 }
-
-# print_centered_row() {
-#     local text="$1"
-#     local width=58
-
-#     local left=$(( (width - ${#text}) / 2 ))
-#     local right=$(( width - ${#text} - left ))
-
-#     printf "│%*s%s%*s│\n" \
-#         "$left" "" \
-#         "$text" \
-#         "$right" ""
-# }
-
+ 
 print_centered_row() {
     local width="$1"
     shift
@@ -67,12 +49,7 @@ print_centered_row() {
         "$text" \
         "$right" ""
 }
-
-# print_wrapped() {
-#     echo "$1" | fold -s -w 54 | while read -r line; do
-#         print_centered_row "$line"
-#     done
-# }
+  
 print_wrapped() {
     local width="$1"
     shift

@@ -15,11 +15,13 @@ show_encounter(){
 }
 
 show_stats(){
-    print_row "Name: $CURRENT_POKEMON"
-    print_row "Type: $TYPE1 $TYPE2"
-    print_row "Region: $REGION"
-    print_row "Rarity: $RARITY"
-    print_row "Encounter Date: $ENCOUNTER_DATE"
+    local width=56
+    
+    print_row $width "Name: $CURRENT_POKEMON"
+    print_row $width "Type: $TYPE1 $TYPE2"
+    print_row $width "Region: $REGION"
+    print_row $width "Rarity: $RARITY"
+    print_row $width "Encounter Date: $ENCOUNTER_DATE"
 }
 
 show_quote() { 
