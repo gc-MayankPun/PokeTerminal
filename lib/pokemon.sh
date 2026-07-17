@@ -11,3 +11,6 @@ load_pokemon() {
     QUOTE=$(jq -r --arg id "$id" '.[$id].quote' "$POKEMON_JSON")
 }
 
+isShiny(){
+    [[ "$CURRENT_SHINY" == "true" ]] && echo "$1" || echo "$2"
+}
