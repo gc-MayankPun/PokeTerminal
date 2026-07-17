@@ -18,7 +18,7 @@ show_stats(){
     local width=56
     
     print_row $width "Name: $CURRENT_POKEMON"
-    print_row $width "Type: $TYPE1 $TYPE2"
+    print_row $width "Type: $TYPE"
     print_row $width "Region: $REGION"
     print_row $width "Rarity: $RARITY"
     print_row $width "Encounter Date: $ENCOUNTER_DATE"
