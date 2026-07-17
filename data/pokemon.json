@@ -1,0 +1,65 @@
+{
+  "1": { 
+    "display_name": "Bulbasaur",
+    "region": "Kanto",
+    "types": ["Grass", "Poison"],
+    "rarity": "Common",
+    "quote": "A strange seed was planted on its back at birth."
+  }, 
+  "2": { 
+    "display_name": "Ivysaur",
+    "region": "Kanto",
+    "types": ["Grass", "Poison"],
+    "rarity": "Common",
+    "quote": "A strange seed was planted on its back at birth."
+  }, 
+  "3": { 
+    "display_name": "Venusaur",
+    "region": "Kanto",
+    "types": ["Grass", "Poison"],
+    "rarity": "Common",
+    "quote": "A strange seed was planted on its back at birth."
+  }, 
+  "4": { 
+    "display_name": "Charmander",
+    "region": "Kanto",
+    "types": ["Fire"],
+    "rarity": "Common",
+    "quote": "The flame on its tail indicates its life force."
+  },
+  "5": { 
+    "display_name": "Charmeleon",
+    "region": "Kanto",
+    "types": ["Fire"],
+    "rarity": "Common",
+    "quote": "The flame on its tail indicates its life force."
+  },
+  "6": { 
+    "display_name": "Charizard",
+    "region": "Kanto",
+    "types": ["Fire"],
+    "rarity": "Common",
+    "quote": "The flame on its tail indicates its life force."
+  },
+  "7": { 
+    "display_name": "Squirtle",
+    "region": "Kanto",
+    "types": ["Water"],
+    "rarity": "Common",
+    "quote": "Squirtle is proud of what he is."
+  },
+  "8": { 
+    "display_name": "Wartortle",
+    "region": "Kanto",
+    "types": ["Water"],
+    "rarity": "Common",
+    "quote": "Squirtle is proud of what he is."
+  },
+  "9": { 
+    "display_name": "Blastoise",
+    "region": "Kanto",
+    "types": ["Water"],
+    "rarity": "Common",
+    "quote": "Squirtle is proud of what he is."
+  }
+}

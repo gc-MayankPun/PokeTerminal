@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
-CURRENT_POKEMON=""
-CURRENT_SHINY=false
-ENCOUNTER_DATE=""
-
 generate_encounter(){
+    local MIN_ID=1
+    local MAX_ID=$(jq 'length' "$POKEMON_JSON")
+    
     # Pick a random Pokémon
-    CURRENT_POKEMON=$(random_choice "${POKEMON_LIST[@]}")
+    CURRENT_POKEMON_ID=$(( RANDOM % ($MAX_ID - MIN_ID + 1) + $MIN_ID ))
  
     # Roll chance for Shiny  
     if chance "$SHINY_CHANCE"; then
@@ -23,7 +22,7 @@ save_encounter() {
     mkdir -p "$CACHE_DIR"
 
     cat > "$CACHE_FILE" <<EOF
-CURRENT_POKEMON="$CURRENT_POKEMON"
+CURRENT_POKEMON_ID="$CURRENT_POKEMON_ID"
 CURRENT_SHINY="$CURRENT_SHINY"
 ENCOUNTER_DATE="$ENCOUNTER_DATE"
 EOF
@@ -43,7 +42,7 @@ load_or_generate_encounter() {
     if [[ -f "$CACHE_FILE" ]]; then
         load_encounter
     else
-        generate_encounter
+        generate_encounter 
         save_encounter
     fi
 }

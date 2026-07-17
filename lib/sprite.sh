@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 get_sprite_path(){
-    if [[ "$CURRENT_SHINY" == "true" ]]; then
-        echo "${SPRITES_DIR}/shiny/${CURRENT_POKEMON}.png"
-    else
-        echo "${SPRITES_DIR}/base/${CURRENT_POKEMON}.png"
+    if [[ "$CURRENT_SHINY" == "true" ]]; then 
+        echo "${SHINY_SPRITE}/${CURRENT_POKEMON_ID}.png"
+    else 
+        echo "${BASE_SPRITE}/${CURRENT_POKEMON_ID}.png"
     fi
 }
 
