@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 
-show_title(){
-    echo "
-╭──────────────────────────────────────────────────────────╮
-│                        PokeTerminal                      │
-╰──────────────────────────────────────────────────────────╯
-"
+show_title() { 
+    box 58 print_centered_row 58 "PokeTerminal"
 }
 
 show_encounter(){
@@ -19,24 +15,20 @@ show_encounter(){
 }
 
 show_stats(){
-    echo "│ Name: $CURRENT_POKEMON                                         │" 
-    echo "│ Type: $TYPE1 $TYPE2                                              │"
-    echo "│ Region: $REGION                                            │" 
-    echo "│ Rarity: $RARITY                                           │" 
-    echo "│ Encounter Date: $ENCOUNTER_DATE                               │"
+    print_row "Name: $CURRENT_POKEMON"
+    print_row "Type: $TYPE1 $TYPE2"
+    print_row "Region: $REGION"
+    print_row "Rarity: $RARITY"
+    print_row "Encounter Date: $ENCOUNTER_DATE"
 }
 
-show_quote(){
-    echo "│     $QUOTE      │"
+show_quote() { 
+    print_wrapped 58 "\"$QUOTE\"" 
 }
 
 display_terminal(){
     show_title
     show_encounter
-    echo "╭──────────────────────────────────────────────────────────╮"
-    show_stats
-    echo "╰──────────────────────────────────────────────────────────╯"
-    echo "╭──────────────────────────────────────────────────────────╮"
-    show_quote
-    echo "╰──────────────────────────────────────────────────────────╯"
+    box 58 show_stats
+    box 58 show_quote 
 }
