@@ -2,19 +2,17 @@
 
 show_title(){
     echo "
-──────────────────────────────────────
-
-            PokeTerminal
-
-──────────────────────────────────────
+╭──────────────────────────────────────────────────────────╮
+│                        PokeTerminal                      │
+╰──────────────────────────────────────────────────────────╯
 "
 }
 
 show_encounter(){
     if [[ "$CURRENT_SHINY" == "true" ]]; then
-        echo "A wild shiny ${CURRENT_POKEMON} appeared!"
+        echo "✨ A shiny ${CURRENT_POKEMON} appeared!"
     else
-        echo "A wild ${CURRENT_POKEMON} appeared!"
+        echo "A ${CURRENT_POKEMON} appeared!"
     fi
 
     display_sprite
