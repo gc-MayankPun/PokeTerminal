@@ -1,65 +1,92 @@
 {
-  "1": { 
+  "1": {
+    "id": 1,
+    "name": "bulbasaur",
     "display_name": "Bulbasaur",
+    "generation": 1,
     "region": "Kanto",
     "types": ["Grass", "Poison"],
     "rarity": "Common",
     "quote": "A strange seed was planted on its back at birth."
-  }, 
-  "2": { 
+  },
+  "2": {
+    "id": 2,
+    "name": "ivysaur",
     "display_name": "Ivysaur",
+    "generation": 1,
     "region": "Kanto",
     "types": ["Grass", "Poison"],
     "rarity": "Common",
-    "quote": "A strange seed was planted on its back at birth."
-  }, 
-  "3": { 
+    "quote": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs."
+  },
+  "3": {
+    "id": 3,
+    "name": "venusaur",
     "display_name": "Venusaur",
+    "generation": 1,
     "region": "Kanto",
     "types": ["Grass", "Poison"],
     "rarity": "Common",
-    "quote": "A strange seed was planted on its back at birth."
-  }, 
-  "4": { 
+    "quote": "The flower on its back catches the sun's rays and uses the energy to bloom brilliantly."
+  },
+  "4": {
+    "id": 4,
+    "name": "charmander",
     "display_name": "Charmander",
+    "generation": 1,
     "region": "Kanto",
     "types": ["Fire"],
     "rarity": "Common",
-    "quote": "The flame on its tail indicates its life force."
+    "quote": "The flame on its tail reflects the strength of its life force."
   },
-  "5": { 
+  "5": {
+    "id": 5,
+    "name": "charmeleon",
     "display_name": "Charmeleon",
+    "generation": 1,
     "region": "Kanto",
     "types": ["Fire"],
     "rarity": "Common",
-    "quote": "The flame on its tail indicates its life force."
+    "quote": "It lashes about with its tail and relentlessly slashes with its sharp claws."
   },
-  "6": { 
+  "6": {
+    "id": 6,
+    "name": "charizard",
     "display_name": "Charizard",
+    "generation": 1,
     "region": "Kanto",
-    "types": ["Fire"],
-    "rarity": "Common",
-    "quote": "The flame on its tail indicates its life force."
+    "types": ["Fire", "Flying"],
+    "rarity": "Rare",
+    "quote": "It spits fire hot enough to melt boulders and soars proudly through the sky."
   },
-  "7": { 
+  "7": {
+    "id": 7,
+    "name": "squirtle",
     "display_name": "Squirtle",
+    "generation": 1,
     "region": "Kanto",
     "types": ["Water"],
     "rarity": "Common",
-    "quote": "Squirtle is proud of what he is."
+    "quote": "When it retracts its long neck into its shell, it squirts out water with vigorous force."
   },
-  "8": { 
+  "8": {
+    "id": 8,
+    "name": "wartortle",
     "display_name": "Wartortle",
+    "generation": 1,
     "region": "Kanto",
     "types": ["Water"],
     "rarity": "Common",
-    "quote": "Squirtle is proud of what he is."
+    "quote": "It is recognized as a symbol of longevity. Its furry tail is a popular sign of long life."
   },
-  "9": { 
+  "9": {
+    "id": 9,
+    "name": "blastoise",
     "display_name": "Blastoise",
+    "generation": 1,
     "region": "Kanto",
     "types": ["Water"],
-    "rarity": "Common",
-    "quote": "Squirtle is proud of what he is."
+    "rarity": "Rare",
+    "quote": "It crushes its foe under its heavy body before unleashing powerful blasts of water."
   }
 }
