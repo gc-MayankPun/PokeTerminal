@@ -40,9 +40,8 @@ update_weather() {
   echo "Saved Date: $saved_day"
   echo "Today Date: $today"
 
-  if [[ "$saved_day" == "$today" ]]; then
+  if [[ "$saved_day" == "$today" ]]; then 
     CURRENT_WEATHER=$(jq -r '.weather.type' "$CAMP_SAVE")
-    echo "Weather Type: $CURRENT_WEATHER" 
     return
   fi
 

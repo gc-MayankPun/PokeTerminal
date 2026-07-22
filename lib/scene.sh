@@ -21,4 +21,5 @@ render_scene() {
   echo "Description: $SCENE_DESCRIPTION"
   echo "Location: $SCENE_LOCATION"
   echo "Event: $SCENE_EVENT"
+  echo "Mood: $PARTNER_MOOD"
 }
