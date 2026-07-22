@@ -33,5 +33,5 @@ update_world() {
   update_weather
   update_season
   update_partner
-  update_camp
+#   update_camp
 }
