@@ -20,7 +20,7 @@ main() {
   update_world 
 
   # Build today's scene
-  build_scene
+  generate_scene
 
   # Render it
   render_scene
