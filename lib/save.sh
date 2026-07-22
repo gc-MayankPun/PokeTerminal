@@ -33,8 +33,8 @@ load_game() {
   load_partner_data
 }
 
-save_game() {
+# save_game() {
     # jq '.camp.level = "$NEW_CAMP_LEVEL"' "$CAMP_SAVE" > tmp.json && mv tmp.json "$CAMP_SAVE"
     # jq '.camp.xp = "$NEW_CAMP_XP"' "$CAMP_SAVE" > tmp.json && mv tmp.json "$CAMP_SAVE"
     # jq '.camp.partner = "$NEW_PARTNER_ID"' "$CAMP_SAVE" > tmp.json && mv tmp.json "$CAMP_SAVE"
-}
+# }

@@ -1,10 +1,23 @@
 #!/usr/bin/env bash
 
 CURRENT_TIME=""
-CURRENT_WEATHER="Sunny"
-WEATHER_CHANGE_TIME=0
-CURRENT_SEASON="Summer"
-SEASON_CHANGE_TIME=0
+CURRENT_WEATHER=""
+CURRENT_SEASON=""
+CURRENT_EVENT=""
+
+generate_weather() {
+  if [[ "$CURRENT_SEASON" == "Spring" ]]; then
+    weather=(Sunny Sunny Sunny Rain Rain Windy)
+  elif [[ "$CURRENT_SEASON" == "Summer" ]]; then
+    weather=(Sunny Sunny Sunny Sunny Windy Rain)
+  elif [[ "$CURRENT_SEASON" == "Autumn" ]]; then
+    weather=(Sunny Windy Windy Rain Fog)
+  elif [[ "$CURRENT_SEASON" == "Winter" ]]; then
+    weather=(Snow Snow Cloudy Windy)
+  fi
+
+  CURRENT_WEATHER=$(random_choice "${weather[@]}")
+}
 
 update_time() {
   local hour=$(date +%H)
@@ -21,28 +34,39 @@ update_time() {
 }
 
 update_weather() {
-  local minute=$((10#$(date +%M)))
+  local today=$(date +%F)
+  # local today="false"
+  local saved_day=$(jq -r '.weather.date' "$CAMP_SAVE")
+  echo "Saved Date: $saved_day"
+  echo "Today Date: $today"
 
-  if (( minute > WEATHER_CHANGE_TIME + 15 )); then
-    local weather=("Rainy" "Sunny" "Sandstorm" "Snowy" "Windy")
-    CURRENT_WEATHER="$(random_choice "${weather[@]}")"
-    WEATHER_CHANGE_TIME="$minute"
-    ((SEASON_CHANGE_TIME++))
+  if [[ "$saved_day" == "$today" ]]; then
+    CURRENT_WEATHER=$(jq -r '.weather.type' "$CAMP_SAVE")
+    echo "Weather Type: $CURRENT_WEATHER" 
+    return
   fi
+
+  generate_weather
 }
 
 update_season() {
-  if (( SEASON_CHANGE_TIME >= 4)); then
-    local season=("Spring" "Summer" "Autumn" "Winter")
-    CURRENT_SEASON="$(random_choice "${season[@]}")"
-    SEASON_CHANGE_TIME=0
+  local month=$(date +%m) 
+
+  if [[ "$month" == "12" || "$month" == "01" || "$month" == "02" ]]; then
+    CURRENT_SEASON="Winter"
+  elif [[ "$month" == "03" || "$month" == "04" || "$month" == "05" ]]; then
+    CURRENT_SEASON="Spring"
+  elif [[ "$month" == "06" || "$month" == "07" || "$month" == "08" ]]; then
+    CURRENT_SEASON="Summer"
+  elif [[ "$month" == "09" || "$month" == "10" || "$month" == "11" ]]; then
+    CURRENT_SEASON="Autumn"
   fi
 }
 
 update_world() {
   update_time
-  update_weather
   update_season
+  update_weather
   update_partner
   # update_camp
 }

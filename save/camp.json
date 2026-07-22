@@ -3,9 +3,11 @@
     "level": 1,
     "xp": 0,
     "theme": "forest",
-    "season": "Summer",
-    "weather": "Sunny",
     "decorations": ["tent"]
+  },
+  "weather": {
+    "date": "2026-06-13",
+    "type": "Rain"
   },
   "partner": 2,
   "collections": [

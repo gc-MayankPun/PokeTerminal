@@ -26,7 +26,7 @@ main() {
   render_scene
 
   # Save any changes (friendship, events, etc.)
-  save_game
+  # save_game
 }
 
 main
