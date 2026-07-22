@@ -3,7 +3,7 @@
 load_pokemon() {
     local id="$1"
  
-    CURRENT_POKEMON=$(jq -r --arg id "$id" '.[$id].display_name' "$POKEMON_JSON")
+    PARTNER_POKEMON=$(jq -r --arg id "$id" '.[$id].display_name' "$POKEMON_JSON")
     REGION=$(jq -r --arg id "$id" '.[$id].region' "$POKEMON_JSON")
     local type_1=$(jq -r --arg id "$id" '.[$id].types[0]' "$POKEMON_JSON")
     local type_2=$(jq -r --arg id "$id" '.[$id].types[1] // ""' "$POKEMON_JSON")

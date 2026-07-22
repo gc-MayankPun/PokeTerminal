@@ -13,7 +13,7 @@ load_partner(){
 }
 
 load_collection(){
-    COLLECTION=$(jq -c '.collection' "$CAMP_SAVE")  
+    COLLECTION=$(jq -c '.collections' "$CAMP_SAVE")  
     # echo "$COLLECTION" | jq '.[1]'
 }
 
