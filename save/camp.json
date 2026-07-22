@@ -1,12 +1,11 @@
 {
   "camp": {
-    "level": "$NEW_CAMP_LEVEL",
-    "xp": "$NEW_CAMP_XP",
+    "level": 1,
+    "xp": 0,
     "theme": "forest",
-    "decorations": [
-      "tent"
-    ],
-    "partner": "$NEW_PARTNER_ID"
+    "season": "Summer",
+    "weather": "Sunny",
+    "decorations": ["tent"]
   },
   "partner": 2,
   "collections": [

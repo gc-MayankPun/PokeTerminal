@@ -5,6 +5,8 @@ load_camp() {
   CAMP["level"]=$(jq -r '.camp.level' "$CAMP_SAVE")
   CAMP["xp"]=$(jq -r '.camp.xp' "$CAMP_SAVE")
   CAMP["theme"]=$(jq -r '.camp.theme' "$CAMP_SAVE")
+  CAMP["season"]=$(jq -c '.camp.season' "$CAMP_SAVE")
+  CAMP["weather"]=$(jq -c '.camp.weather' "$CAMP_SAVE")
   CAMP["decorations"]=$(jq -c '.camp.decorations' "$CAMP_SAVE")
 }
 
@@ -32,7 +34,7 @@ load_game() {
 }
 
 save_game() {
-    jq '.camp.level = "$NEW_CAMP_LEVEL"' "$CAMP_SAVE" > tmp.json && mv tmp.json "$CAMP_SAVE"
-    jq '.camp.xp = "$NEW_CAMP_XP"' "$CAMP_SAVE" > tmp.json && mv tmp.json "$CAMP_SAVE"
-    jq '.camp.partner = "$NEW_PARTNER_ID"' "$CAMP_SAVE" > tmp.json && mv tmp.json "$CAMP_SAVE"
+    # jq '.camp.level = "$NEW_CAMP_LEVEL"' "$CAMP_SAVE" > tmp.json && mv tmp.json "$CAMP_SAVE"
+    # jq '.camp.xp = "$NEW_CAMP_XP"' "$CAMP_SAVE" > tmp.json && mv tmp.json "$CAMP_SAVE"
+    # jq '.camp.partner = "$NEW_PARTNER_ID"' "$CAMP_SAVE" > tmp.json && mv tmp.json "$CAMP_SAVE"
 }

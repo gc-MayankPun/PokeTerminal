@@ -8,6 +8,16 @@ generate_scene() {
 }
 
 render_scene() {
+  echo "Time: $CURRENT_TIME"
+  echo "Weather: $CURRENT_WEATHER"
+  echo "Season: $CURRENT_SEASON"
+  echo "Weather change in: $WEATHER_CHANGE_TIME"
+  echo "Season change in: $SEASON_CHANGE_TIME"
+
+  echo ""
+  echo "Minutes: $((10#$(date +%M)))"
+  echo ""
+
   echo "Title: $SCENE_TITLE"
   echo "Dialogue: $SCENE_DIALOGUE"
   echo "Description: $SCENE_DESCRIPTION"
