@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-CURRENT_TIME=""
-CURRENT_WEATHER=""
-CURRENT_SEASON=""
 CURRENT_EVENT=""
 
 generate_weather() {
@@ -35,21 +32,18 @@ update_time() {
 
 update_weather() {
   local today=$(date +%F)
-  # local today="false"
-  local saved_day=$(jq -r '.weather.date' "$CAMP_SAVE")
-  echo "Saved Date: $saved_day"
-  echo "Today Date: $today"
+  # local today="false" 
 
-  if [[ "$saved_day" == "$today" ]]; then 
+  if [[ "$WEATHER_DATE" == "$today" ]]; then
     CURRENT_WEATHER=$(jq -r '.weather.type' "$CAMP_SAVE")
-    return
+  else
+    generate_weather
+    WEATHER_DATE=$(date +%F)
   fi
-
-  generate_weather
 }
 
 update_season() {
-  local month=$(date +%m) 
+  local month=$(date +%m)
 
   if [[ "$month" == "12" || "$month" == "01" || "$month" == "02" ]]; then
     CURRENT_SEASON="Winter"
