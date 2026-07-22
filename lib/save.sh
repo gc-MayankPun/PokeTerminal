@@ -52,8 +52,6 @@ save_camp() {
 save_weather() {
   tmp=$(mktemp)
 
-  echo "Hello: $WEATHER_DATE"
-
   jq \
     --arg date "$WEATHER_DATE" \
     --arg type "$CURRENT_WEATHER" \

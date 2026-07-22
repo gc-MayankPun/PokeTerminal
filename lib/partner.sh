@@ -63,7 +63,7 @@ load_partner_data() {
 
 update_partner() {
   calculate_mood
-  gain_friendship
-  level_up
-  evolve
+  # gain_friendship
+  # level_up
+  # evolve
 }

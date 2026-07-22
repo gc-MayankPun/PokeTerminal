@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-render_scene(){
-    # echo "Rendering"
-
+render_scene(){ 
     render_background
     render_camp
     render_partner
