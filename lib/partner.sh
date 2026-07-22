@@ -2,9 +2,13 @@
 
 calculate_mood() {
   # Calculate mood based on weather and time
-  echo "$CURRENT_TIME"
-  echo "$CURRENT_WEATHER"
-  echo "$PARTNER_FRIENDSHIP"
+#   echo "$CURRENT_TIME"
+#   echo "$CURRENT_WEATHER"
+#   echo "$PARTNER_FRIENDSHIP"
+
+  if [[ "$CURRENT_TIME" == "Night" || "$CURRENT_WEATHER" == "Snowy" ]]; then
+    PARTNER_MOOD="Sleepy"
+  fi
 
 }
 

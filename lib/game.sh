@@ -32,6 +32,6 @@ update_world() {
   update_time
   update_weather
   update_season
-  load_partner_data
   update_partner
+  update_camp
 }

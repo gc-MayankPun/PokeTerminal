@@ -20,13 +20,13 @@ main() {
   update_world 
 
   # Build today's scene
-  # build_scene
+  build_scene
 
   # Render it
-  # render_scene
+  render_scene
 
   # Save any changes (friendship, events, etc.)
-  # save_game
+  save_game
 }
 
 main
