@@ -1,0 +1,23 @@
+{
+  "camp": {
+    "level": 1,
+    "xp": 0,
+    "theme": "forest",
+    "decorations": ["tent"]
+  },
+
+  "partner": 448,
+
+  "collection": [
+    {
+      "id": 448,
+      "level": 5,
+      "friendship": 10
+    },
+    {
+      "id": 48,
+      "level": 5,
+      "friendship": 30
+    }
+  ]
+}
