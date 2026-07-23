@@ -12,6 +12,7 @@ source "$ROOT/lib/pokemon.sh"
 source "$ROOT/lib/sprite.sh"
 source "$ROOT/lib/scene.sh"
 source "$ROOT/lib/dialogue.sh"
+source "$ROOT/lib/ui.sh"
 
 main() {
   # Load all saved data

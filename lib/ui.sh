@@ -53,3 +53,10 @@ print_wrapped() {
         print_centered_row "$width" "$line"
     done
 }
+
+center_text() {
+  local text="$1"
+  local width=$(tput cols)
+  local padding=$(( (width - ${#text}) / 2 ))
+  printf "%*s%s\n" "$padding" "" "$text"
+}

@@ -1,30 +1,50 @@
 #!/usr/bin/env bash
 
 generate_scene() {
-  generate_dialogue
+  SCENE_TITLE="Snow quietly blankets the camp."
 
-  # SCENE_TITLE="Good Morning"
-  # SCENE_DESCRIPTION="Rain falls gently around the camp."
-  # SCENE_DIALOGUE="Riolu splashes through puddles."
-  # SCENE_LOCATION="Forest Camp"
+  SCENE_STATUS="😴 Sleepy"
+
+  SCENE_MESSAGE="It's warm here..."
+
+  SCENE_AMBIENCE="The campfire crackles softly."
+
+  generate_dialogue
 }
 
 render_scene() {
-  echo "Time: $CURRENT_TIME"
-  echo "Weather: $CURRENT_WEATHER"
-  echo "Season: $CURRENT_SEASON"
+  printf "\n"
+  printf "             🌿 PokeCamp 🌿\n\n"
 
-  echo ""
+  echo "    $SCENE_TITLE"
+  printf "\n"
 
-  echo "Title: $SCENE_TITLE"
-  echo "Dialogue: $SCENE_DIALOGUE"
-  echo "Description: $SCENE_DESCRIPTION"
-  echo "Location: $SCENE_LOCATION"
-  echo "Event: $SCENE_EVENT"
-
-  echo ""
-
-  echo "Pokemon: $PARTNER_POKEMON"
-  echo "Mood: $PARTNER_MOOD"
   display_sprite "$PARTNER_ID"
+
+  printf "\n"
+  echo "    $SCENE_DIALOGUE"
+  printf "\n" 
+
+  echo "────────────────────────────────────────────────────────"
+
+  printf "\n"
+  printf "    %s\n" "$SCENE_STATUS"
+  printf "    %s\n" "$SCENE_MESSAGE"
+  printf "\n"
+
+  echo "────────────────────────────────────────────────────────"
+
+  printf "\n"
+  printf "    $PARTNER_POKEMON Lv.$PARTNER_LEVEL\n"
+
+  printf "    Friendship $PARTNER_FRIENDSHIP\n"
+  printf "    $CURRENT_WEATHER\n"
+  printf "    $CURRENT_SEASON\n"
+  printf "\n"
+
+  echo "────────────────────────────────────────────────────────"
+
+  printf "\n"
+  printf "    $SCENE_AMBIENCE\n" ""
+  printf "\n"
 }

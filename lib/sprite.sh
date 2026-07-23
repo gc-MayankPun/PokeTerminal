@@ -12,5 +12,5 @@ display_sprite(){
         return 1
     fi
 
-    kitty +kitten icat --align=left "${pokemon_sprite}"
+    kitty +kitten icat --align=center "${pokemon_sprite}"
 }
