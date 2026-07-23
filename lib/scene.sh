@@ -12,32 +12,22 @@ generate_scene() {
   generate_dialogue
 }
 
-render_scene() { 
+render_scene() {
   printf "\n"
-  center_text "🌿 PokeCamp 🌿"
-  printf "\n"
-
-  center_text "$SCENE_TITLE"
-  printf "\n"
+  draw_box --no-border "🌿 PokeCamp $(repeat " " 10) Night $(repeat " " 10) Summer • Windy 🌿"
 
   display_sprite "$PARTNER_ID"
-
-  printf "\n"
   center_text "$SCENE_DIALOGUE"
+
+  printf "\n"
+  draw_box --inside-left --no-border "Camp" \
+    "🔥 The campfire burns steadily." \
+    "🪵 Someone added fresh logs." \
+    "🫐 A berry basket sits beside the tent."
+
   printf "\n"
 
-  draw_box "" \
-    "$SCENE_STATUS" \
-    "$SCENE_MESSAGE" \
-    ""
-  printf "\n" 
-
-  draw_box "" \
-    "$PARTNER_POKEMON Lv.$PARTNER_LEVEL" \
-    "Friendship $PARTNER_FRIENDSHIP" \
-    "$CURRENT_WEATHER" \
-    "$CURRENT_SEASON" \
-    ""
+  draw_info_block "Partner" 20 "Ivysaur" "Lv.5" "Mood" "Relaxed" "Friendship" "■■□□□□□□□ 10%"
 
   printf "\n"
   center_text "$SCENE_AMBIENCE"
