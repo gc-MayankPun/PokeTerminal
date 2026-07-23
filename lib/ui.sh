@@ -1,62 +1,27 @@
 #!/usr/bin/env bash
 
-repeat() {
-    local char="$1"
-    local count="$2"
-
-    for ((i=0; i<count; i++)); do
-        printf "%s" "$char"
-    done
-}
-
-box() {
-    local width="$1"
-    shift
-
-    echo "╭$(repeat "─" "$width")╮"
-    "$@"
-    echo "╰$(repeat "─" "$width")╯"
-}
-
-print_row() {
-    local width="$1"
-    shift
-
-    printf "│ %-*s │\n" "$width" "$*"
-}
- 
-print_centered_row() {
-    local width="$1"
-    shift
-
-    local text="$*"
-
-    local left=$(( (width - ${#text}) / 2 ))
-    local right=$(( width - ${#text} - left ))
-
-    printf "│%*s%s%*s│\n" \
-        "$left" "" \
-        "$text" \
-        "$right" ""
-}
-  
-print_wrapped() {
-    local width="$1"
-    shift
-
-    local text="$*"
-
-    # Account for the borders ("│ ")
-    local wrap_width=$((width - 4))
-
-    echo "$text" | fold -s -w "$wrap_width" | while read -r line; do
-        print_centered_row "$width" "$line"
-    done
-}
-
 center_text() {
   local text="$1"
   local width=$(tput cols)
   local padding=$(( (width - ${#text}) / 2 ))
+    
   printf "%*s%s\n" "$padding" "" "$text"
+}
+
+draw_box() {
+  local width=60
+  local -a lines=("$@")
+  local term_width=$(tput cols)
+  local box_pad=$(( (term_width - width - 2) / 2 ))
+  local indent; indent=$(printf "%*s" "$box_pad" "")
+
+  printf "%s┌" "$indent"; printf '─%.0s' $(seq 1 "$width"); printf "┐\n"
+  for line in "${lines[@]}"; do
+    local pad=$(( (width - ${#line}) / 2 ))
+    local rpad=$(( width - ${#line} - pad ))
+    (( pad < 0 )) && pad=0
+    (( rpad < 0 )) && rpad=0
+    printf "%s│%*s%s%*s│\n" "$indent" "$pad" "" "$line" "$rpad" ""
+  done
+  printf "%s└" "$indent"; printf '─%.0s' $(seq 1 "$width"); printf "┘\n"
 }
