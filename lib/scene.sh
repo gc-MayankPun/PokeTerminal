@@ -27,7 +27,7 @@ render_scene() {
 
   printf "\n"
 
-  draw_info_block "Partner" 20 "Ivysaur" "Lv.5" "Mood" "Relaxed" "Friendship" "■■□□□□□□□ 10%"
+  draw_info_block "Partner" 20 "$PARTNER_POKEMON" "Lv.$PARTNER_LEVEL" "Mood" "Relaxed" "Friendship" "$(draw_friendship_bar $PARTNER_FRIENDSHIP)"
 
   printf "\n"
   center_text "$SCENE_AMBIENCE"
