@@ -23,16 +23,17 @@ update_time() {
     CURRENT_TIME="Night"
   elif (( hour < 12 )); then
     CURRENT_TIME="Morning"
-  elif (( hour < 18 )); then
+  elif (( hour < 17 )); then
     CURRENT_TIME="Afternoon"
-  else
+  elif (( hour < 21 )); then
     CURRENT_TIME="Evening"
+  else
+    CURRENT_TIME="Night"
   fi
 }
 
 update_weather() {
-  local today=$(date +%F)
-  # local today="false" 
+  local today=$(date +%F) 
 
   if [[ "$WEATHER_DATE" == "$today" ]]; then
     CURRENT_WEATHER=$(jq -r '.weather.type' "$CAMP_SAVE")

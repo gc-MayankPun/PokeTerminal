@@ -8,25 +8,28 @@
     ]
   },
   "weather": {
-    "date": "2026-07-24",
-    "type": "Sunny"
+    "date": "2026-07-25",
+    "type": "Rain"
   },
   "partner": 2,
   "collections": [
     {
       "id": 2,
       "level": 5,
-      "friendship": 2
+      "friendship": 2,
+      "shiny": "false"
     },
     {
       "id": 448,
       "level": 5,
-      "friendship": 10
+      "friendship": 10,
+      "shiny": "false"
     },
     {
       "id": 48,
       "level": 5,
-      "friendship": 0
+      "friendship": 0,
+      "shiny": "false"
     }
   ]
 }

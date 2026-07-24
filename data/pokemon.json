@@ -6,8 +6,7 @@
     "generation": 1,
     "region": "Kanto",
     "types": ["Grass", "Poison"],
-    "rarity": "Common",
-    "quote": "A strange seed was planted on its back at birth."
+    "rarity": "Common"
   },
   "2": {
     "id": 2,
@@ -16,8 +15,7 @@
     "generation": 1,
     "region": "Kanto",
     "types": ["Grass", "Poison"],
-    "rarity": "Common",
-    "quote": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs."
+    "rarity": "Common"
   },
   "3": {
     "id": 3,
@@ -26,8 +24,7 @@
     "generation": 1,
     "region": "Kanto",
     "types": ["Grass", "Poison"],
-    "rarity": "Common",
-    "quote": "The flower on its back catches the sun's rays and uses the energy to bloom brilliantly."
+    "rarity": "Common"
   },
   "4": {
     "id": 4,
@@ -36,8 +33,7 @@
     "generation": 1,
     "region": "Kanto",
     "types": ["Fire"],
-    "rarity": "Common",
-    "quote": "The flame on its tail reflects the strength of its life force."
+    "rarity": "Common"
   },
   "5": {
     "id": 5,
@@ -46,8 +42,7 @@
     "generation": 1,
     "region": "Kanto",
     "types": ["Fire"],
-    "rarity": "Common",
-    "quote": "It lashes about with its tail and relentlessly slashes with its sharp claws."
+    "rarity": "Common"
   },
   "6": {
     "id": 6,
@@ -56,8 +51,7 @@
     "generation": 1,
     "region": "Kanto",
     "types": ["Fire", "Flying"],
-    "rarity": "Rare",
-    "quote": "It spits fire hot enough to melt boulders and soars proudly through the sky."
+    "rarity": "Rare"
   },
   "7": {
     "id": 7,
@@ -66,8 +60,7 @@
     "generation": 1,
     "region": "Kanto",
     "types": ["Water"],
-    "rarity": "Common",
-    "quote": "When it retracts its long neck into its shell, it squirts out water with vigorous force."
+    "rarity": "Common"
   },
   "8": {
     "id": 8,
@@ -76,8 +69,7 @@
     "generation": 1,
     "region": "Kanto",
     "types": ["Water"],
-    "rarity": "Common",
-    "quote": "It is recognized as a symbol of longevity. Its furry tail is a popular sign of long life."
+    "rarity": "Common"
   },
   "9": {
     "id": 9,
@@ -86,7 +78,6 @@
     "generation": 1,
     "region": "Kanto",
     "types": ["Water"],
-    "rarity": "Rare",
-    "quote": "It crushes its foe under its heavy body before unleashing powerful blasts of water."
+    "rarity": "Rare"
   }
 }

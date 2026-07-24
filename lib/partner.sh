@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 
 calculate_mood() {
-  # Calculate mood based on weather and time
-  # echo "$CURRENT_TIME"
-  # echo "$CURRENT_WEATHER"
-  # echo "$PARTNER_FRIENDSHIP"
-
   # compute a score with partner friendship
   local mood_score=50
   (( mood_score += PARTNER_FRIENDSHIP / 4 ))
@@ -58,6 +53,7 @@ load_partner_data() {
   if [[ -n "$obj" ]]; then
     PARTNER_LEVEL=$(echo "$obj" | jq -r '.level')
     PARTNER_FRIENDSHIP=$(echo "$obj" | jq -r '.friendship')
+    PARTNER_SHINY=$(echo "$obj" | jq -r '.shiny')
   fi
 }
 
