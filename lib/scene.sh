@@ -14,7 +14,7 @@ generate_scene() {
 
 render_scene() {
   printf "\n"
-  draw_box --no-border "🌿 PokeCamp $(repeat " " 10) Night $(repeat " " 10) Summer • Windy 🌿"
+  draw_box --no-border "🌿 PokeCamp $(repeat " " 10) $CURRENT_TIME $(repeat " " 10) $CURRENT_SEASON • $CURRENT_WEATHER 🌿"
 
   display_sprite "$PARTNER_ID"
   center_text "$SCENE_DIALOGUE"
@@ -27,7 +27,7 @@ render_scene() {
 
   printf "\n"
 
-  draw_info_block "Partner" 20 "$PARTNER_POKEMON" "Lv.$PARTNER_LEVEL" "Mood" "Relaxed" "Friendship" "$(draw_friendship_bar $PARTNER_FRIENDSHIP)"
+  draw_info_block "Partner" 20 "$PARTNER_POKEMON" "Lv.$PARTNER_LEVEL" "Mood" "$PARTNER_MOOD" "Friendship" "$(draw_friendship_bar $PARTNER_FRIENDSHIP)"
 
   printf "\n"
   center_text "$SCENE_AMBIENCE"
