@@ -61,6 +61,5 @@ update_world() {
   update_time
   update_season
   update_weather
-  update_partner
   # update_camp
 }

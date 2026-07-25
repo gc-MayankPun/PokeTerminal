@@ -45,7 +45,7 @@ evolve() {
 }
 
 load_partner_data() {
-  load_pokemon "$PARTNER_ID"
+  load_pokemon "$PARTNER_ID" 
 
   local obj
   obj=$(echo "$COLLECTION" | jq -c --argjson pid "$PARTNER_ID" '.[] | select(.id == $pid)')

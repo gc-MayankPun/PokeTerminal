@@ -27,6 +27,10 @@ load_weather() {
 
 load_partner() {
   PARTNER_ID=$(jq -r ".partner" "$CAMP_SAVE")
+
+  if [[ "$PARTNER_ID" == "null" ]]; then
+    PARTNER_ID=$(encounter_pokemon)
+  fi
 }
 
 load_collection() {
@@ -77,9 +81,32 @@ save_partner() {
   mv "$tmp" "$CAMP_SAVE"
 }
 
-# save_collection() {
-# # Update collection array
-# }
+save_collection() {
+  local tmp id level friendship shiny
+  tmp=$(mktemp)
+
+  id=$1
+  level=$2
+  friendship=$3
+  shiny=$4
+
+  jq \
+    --argjson id "$id" \
+    --argjson level $level \
+    --argjson friendship $friendship \
+    --arg shiny "$shiny" \
+    '
+    .collections += [{
+      id: $id,
+      level: $level,
+      friendship: $friendship,
+      shiny: $shiny
+    }]
+    ' \
+    "$CAMP_SAVE" > "$tmp"
+
+  mv "$tmp" "$CAMP_SAVE"
+}
 
 load_game() {
   load_camp

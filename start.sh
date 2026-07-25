@@ -6,7 +6,7 @@ source "$ROOT/config.sh"
 source "$ROOT/lib/utils.sh"
 
 source "$ROOT/lib/save.sh"
-source "$ROOT/lib/game.sh" 
+source "$ROOT/lib/game.sh"
 source "$ROOT/lib/partner.sh"
 source "$ROOT/lib/pokemon.sh"
 source "$ROOT/lib/sprite.sh"
@@ -19,7 +19,13 @@ main() {
   load_game
 
   # Update the world based on current time/day
-  update_world 
+  update_world
+
+  # Update partner's mood, friendship, etc
+  update_partner
+
+  # update_visitors
+  # update_events
 
   # Build today's scene
   generate_scene
