@@ -10,8 +10,7 @@ source "$ROOT/lib/game.sh"
 source "$ROOT/lib/partner.sh"
 source "$ROOT/lib/pokemon.sh"
 source "$ROOT/lib/sprite.sh"
-source "$ROOT/lib/scene.sh"
-source "$ROOT/lib/dialogue.sh"
+source "$ROOT/lib/scene.sh" 
 source "$ROOT/lib/ui.sh"
 
 main() {
