@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+source "$ROOT/config.sh"
+source "$ROOT/lib/utils.sh"
+source "$ROOT/lib/save.sh"
+source "$ROOT/lib/pokemon.sh"
+source "$ROOT/lib/partner.sh"
+
+load_game
+
+case "$1" in
+  "")
+    exec "$ROOT/start.sh"
+  ;;
+
+  partner)
+    shift
+    source "$ROOT/commands/partner.sh"
+  ;;
+
+  catch)
+    shift
+    source "$ROOT/commands/catch.sh"
+  ;;
+
+  visitor)
+    shift
+    source "$ROOT/commands/visitor.sh"
+  ;;
+
+  help|-h|--help)
+    "$ROOT/commands/help.sh"
+  ;;
+
+  *)
+    echo "Unknown command '$1'"
+    echo "Run 'pokecamp help'"
+  ;;
+esac
