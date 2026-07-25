@@ -22,7 +22,7 @@ encounter_pokemon() {
     isShiny=true 
   fi
 
-  pokemon_lvl=5
+  pokemon_lvl=$(( RANDOM % 10 + 1 ))
  
   save_collection $id $pokemon_lvl $friendship $isShiny
   echo $id
